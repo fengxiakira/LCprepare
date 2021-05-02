@@ -4,8 +4,7 @@
 from alg import LinkedList
 
 def test():
-    ll = LinkedList()
-    print(ll)
+    print("a")
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
