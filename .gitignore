@@ -1,4 +1,4 @@
-./.idea
-./unitTest/.pytest_cache
+.idea
+unitTest/.pytest_cache
 venv
-./vscode
+.vscode
