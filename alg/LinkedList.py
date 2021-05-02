@@ -27,7 +27,8 @@ class LinkedList:
         while node:
             nodes.append(node.data)
             node = node.next
-        nodes.append("None")
-        return " -> ".join(str(nodes))
+        # nodes.append("None")
+        return str(nodes)
+
 
 

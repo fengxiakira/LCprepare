@@ -7,12 +7,10 @@ from alg.LinkedList import *
 def test_LL_None():
     llist = LinkedList()
     print(llist)
-    assert llist == []
+    assert str(llist) == "[]"
 
 def test_LL():
-    head = Node("a")
-    llist = LinkedList()
-    llist.head = head
-    assert llist == "1 -> None"
+    llist = LinkedList([1,2,3])
+    assert str(llist) == "[1, 2, 3]"
 
 
