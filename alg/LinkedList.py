@@ -1,4 +1,3 @@
-
 # A LinkedList node
 class Node:
 
@@ -39,11 +38,11 @@ class LinkedList:
             yield node
             node = node.next
 
-    def add_first(self,node):
+    def add_first(self, node):
         node.next = self.head
         self.head = node
 
-    def add_tail(self,node):
+    def add_tail(self, node):
         if not self.head:
             self.head = node
             return
@@ -52,7 +51,7 @@ class LinkedList:
         curr_node.next = node
 
     # insert after an existing node
-    def insert_after(self,targetNodeData,new_node):
+    def insert_after(self, targetNodeData, new_node):
         if not self.head:
             raise Exception("list is empty")
         # traverse the LL
@@ -62,8 +61,7 @@ class LinkedList:
                 node.next = new_node
                 break
 
-
-    def insert_before(self,targetNodeData,new_node):
+    def insert_before(self, targetNodeData, new_node):
         if not self.head:
             raise Exception("list is empty")
 
@@ -79,15 +77,14 @@ class LinkedList:
             curr = curr.next
 
         # if node doesn't exist
-        raise Exception("Node '%s' nof found" %targetNodeData)
+        raise Exception("Node '%s' nof found" % targetNodeData)
 
-    def remove_node(self,targetNodeData):
+    def remove_node(self, targetNodeData):
         if not self.head:
             raise Exception("list is empty")
         if self.head.data == targetNodeData:
             self.head = self.head.next
             return
-
         curr = self.head
         while curr.next:
             if curr.next.data == targetNodeData:
@@ -96,10 +93,13 @@ class LinkedList:
             curr = curr.next
         raise Exception("Node '%s' nof found" % targetNodeData)
 
-
-
-
-
-
-
+    def length(self) -> int:
+        if not self.head:
+            return 0
+        len = 0
+        curr = self.head
+        while curr:
+            len += 1
+            curr = curr.next
+        return len
 

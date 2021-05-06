@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from alg import LinkedList
+from alg import *
 
 def test():
     print("a")
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    llist = LinkedList([1, 1, 2, 4, 3])
+    print(llist.length())
 
 
 # Press the green button in the gutter to run the script.

@@ -36,6 +36,11 @@ def test_remove():
     llist.remove_node(3)
     assert str(llist) == "[1, 1, 2, 4]"
 
+def test_len():
+    llist = LinkedList([1, 1, 2, 4, 3])
+    print("a")
+    assert llist.length() == 5
+
 
 
 
